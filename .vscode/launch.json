@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(SPG) Launch Current C++ file",
+            "type": "cppvsdbg",
+            "request": "launch",
+            // Launch exe file that is in build directory named as current open file with .exe extension
+            "program": "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            // Run from build directory
+            // This will allow accessing assets in build directory by using paths relative to launched file
+            "cwd": "${workspaceFolder}\\build\\",
+            "environment": [],
+            "console": "integratedTerminal",
+            // Run build before running
+            "preLaunchTask": "(SPG) C/C++: cl.exe build active file with SDL2"
+        }
+    ]
+}
